@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizzbuzz programming exercise</title>
+    <script type="text/javascript" src ="/fizzbuzz.js"></script>
+</head>
+<body>
+    <h1>Fizzbuzz</h1>
+    <div id="inputNum">Please enter a number you would like to FizzBuzz up to: 
+        <br>Every number divisible by 3 is replaced with fuzz,<br>
+        Every number divisible by 5 is replaced with buzz. <br>
+        Numbers divisible by both 3 & 5 are replaced with fuzzbuzz.<br><br>
+        <input type="number" id="inputId" >
+        <button type="button" onclick="getInputValue()">Submit</button>
+    </div>
+    <br>
+<output id="displayNum"></output>
+<style>
+
+    h1 {
+        display: flex;
+        color: rgb(25, 87, 145);
+        margin: 15px;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        margin: 5px 5px;
+        text-shadow: 0 0 1px rgba(2,0,36,1);
+        
+    }
+
+    input {
+        display: flex;
+        margin: 5px;
+        width: auto;
+        padding: 5px;
+        text-align: center;
+    }
+    button {
+        margin: 10px 10px;
+        box-shadow: 0 0 5px rgb(87, 161, 190);
+        align-items: center;
+    }
+
+    output {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 5px 5px;
+    }
+</style>
+</html>
