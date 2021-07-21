@@ -1,36 +1,46 @@
-/*let num = inputNum.addEventListener('submit', function(){
-    for (let i = 1; i <= num; i++) {
-        if (i % 3 === 0) {
-            console.log('fizz');
-        } else {
-            console.log(i);
-        }
-    }
-})
+let fizz = 'fizz!';
+let buzz = 'buzz!';
+let fizzbuzz = 'fizzbuzz!';
 
-function answer(){
-    alert(num);
-}
-
-let test = document.getElementById("input_id").value
-function input(){
-    console.log(test);
-}
-*/
 function getInputValue(){
     let inputVal = parseInt(document.getElementById("inputId").value);
     let outputVal = document.getElementById("displayNum");
 
     
     for (let i = 1; i <= inputVal; i++) {
-        if (i % 3 === 0) {
-            console.log('fizz');
-            let fizz = 'fizz';
-            outputVal.appendChild(document.createTextNode(fizz + "!---"));
+        if (i % 3 === 0 && i % 5 === 0){
+            console.log(fizzbuzz);
+            if(i === inputVal){
+                outputVal.appendChild(document.createTextNode(fizzbuzz));
+            }else {
+                outputVal.appendChild(document.createTextNode(fizzbuzz + "   |   "));
+            }
+        } else if (i % 3 === 0) {
             
-        } else {
+            console.log(fizz);
+            if(i === inputVal){
+                outputVal.appendChild(document.createTextNode(fizz));
+            }else {
+                outputVal.appendChild(document.createTextNode(fizz + "   |   "));
+            }
+            
+        } else if (i % 5 === 0){
+            console.log(buzz);
+            if(i === inputVal){
+                outputVal.appendChild(document.createTextNode(buzz));
+            }else {
+                outputVal.appendChild(document.createTextNode(buzz + "   |   "));
+            }
+        } 
+        
+        else {
             console.log(i);
-            outputVal.appendChild(document.createTextNode(i + "---"));
+            if (i === inputVal) {
+                outputVal.appendChild(document.createTextNode(i));
+            }else {
+                outputVal.appendChild(document.createTextNode(i + "   |   "));
+            }
         }
     }
 } 
+
