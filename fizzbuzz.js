@@ -5,7 +5,6 @@ let fizzbuzz = 'fizzbuzz!';
 function getInputValue(){
     let inputVal = parseInt(document.getElementById("inputId").value);
     let outputVal = document.getElementById("displayNum");
-
     
     for (let i = 1; i <= inputVal; i++) {
         if (i % 3 === 0 && i % 5 === 0){
@@ -16,7 +15,6 @@ function getInputValue(){
                 outputVal.appendChild(document.createTextNode(fizzbuzz + "   |   "));
             }
         } else if (i % 3 === 0) {
-            
             console.log(fizz);
             if(i === inputVal){
                 outputVal.appendChild(document.createTextNode(fizz));
